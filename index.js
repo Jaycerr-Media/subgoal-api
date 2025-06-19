@@ -4,9 +4,7 @@ const app = express();
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const BROADCASTER_ID = process.env.BROADCASTER_ID;
-
-// ✅ Your manually generated Twitch token (with channel:read:subscriptions scope)
-const USER_ACCESS_TOKEN = "q8qegreg71uatg9t9vmoi13eitvdb7";
+const USER_ACCESS_TOKEN = process.env.USER_ACCESS_TOKEN;
 
 async function getSubCount() {
   const res = await fetch(
