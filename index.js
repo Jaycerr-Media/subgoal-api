@@ -5,8 +5,8 @@ const app = express();
 const CLIENT_ID = process.env.CLIENT_ID;
 const BROADCASTER_ID = process.env.BROADCASTER_ID;
 
-// ✅ Paste your generated user token below
-const USER_ACCESS_TOKEN = "azpowz1bjopur0yccdvwyb1j5z4f58";
+// ✅ Your manually generated Twitch token (with channel:read:subscriptions scope)
+const USER_ACCESS_TOKEN = "PASTE_YOUR_TOKEN_HERE";
 
 async function getSubCount() {
   const res = await fetch(
@@ -39,4 +39,4 @@ app.get("/subcount", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
